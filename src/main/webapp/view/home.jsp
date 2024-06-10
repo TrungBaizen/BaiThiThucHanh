@@ -48,6 +48,7 @@
                 </td>
             </tr>
         </c:forEach>
+
         <tr>
             <td class="create" colspan="8">
                 <a href="http://localhost:9999/product?action=create">Create Product</a>
