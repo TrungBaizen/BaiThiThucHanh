@@ -12,10 +12,8 @@ import java.util.List;
 
 public class CategoryRepository implements ICategoryRepository{
     private Connection connection;
-    private ICategoryRepository categoryRepository;
     public CategoryRepository(){
         connection = ConnectionDB.connection();
-        categoryRepository = new CategoryRepository();
     }
     @Override
     public boolean add(Category category) {

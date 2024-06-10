@@ -2,8 +2,10 @@ package service;
 
 import model.Category;
 import model.Product;
+import repository.CategoryRepository;
 import repository.ICategoryRepository;
 import repository.IProductRepository;
+import repository.ProductRepository;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,9 +18,9 @@ public class ProductService implements IProductService {
     private ICategoryRepository categoryRepository;
     private IProductRepository productRepository;
 
-    public ProductService(ICategoryRepository categoryRepository) {
-        this.categoryRepository = categoryRepository;
-        this.productRepository = productRepository;
+    public ProductService() {
+        this.categoryRepository = new CategoryRepository();
+        this.productRepository = new ProductRepository();
     }
 
     @Override
@@ -32,7 +34,7 @@ public class ProductService implements IProductService {
         Category category = categoryRepository.findCategoryById(category_id);
         Product product = new Product(nameProduct, price, quantity, color, description, category);
         productRepository.add(product);
-        response.sendRedirect("/products?action=home");
+        response.sendRedirect("/product?action=home");
     }
 
     @Override

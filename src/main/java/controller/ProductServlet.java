@@ -1,26 +1,20 @@
 package controller;
 
-import com.example.baithimodule3.HelloServlet;
-import service.CategoryService;
-import service.ICategoryService;
 import service.IProductService;
 import service.ProductService;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static java.nio.file.Files.delete;
 
 @WebServlet(name = "ProductServlet", value = "/product")
-public class ProductServlet extends HelloServlet {
-    private IProductService productService;
-
-    public ProductServlet() {
-        this.productService = productService;
-    }
+public class ProductServlet extends HttpServlet {
+    private IProductService productService = new ProductService();
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

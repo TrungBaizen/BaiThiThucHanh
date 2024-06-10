@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ADMIN
-  Date: 6/10/2024
-  Time: 9:23 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 .<!doctype html>
@@ -14,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Trang chủ</title>
 </head>
 <body>
 <div class="header">
@@ -48,7 +41,7 @@
                 <td>${item.descriptions}</td>
                 <td>${item.category.id}</td>
                 <td>
-                    <button><a href="http://localhost:9999/product?action=update&id=${item.id}">Edit</a></button>
+                    <button><a href="http://localhost:9999/product?action=update&id=${item.id}">Update</a></button>
                 </td>
                 <td>
                     <button><a href="http://localhost:9999/product?action=delete&id=${item.id}">Delete</a></button>
@@ -61,5 +54,6 @@
             </td>
         </tr>
     </table>
+</div>
 </body>
 </html>

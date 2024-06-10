@@ -20,7 +20,7 @@
 <form method="post" >
     <h1>Edit</h1>
     <input type="text" name="id" value="${product.id}" readonly>
-    <input type="text" name="nameProduct" value="${product.nameProduct}" readonly>
+    <input type="text" name="nameProduct" value="${product.nameProduct}">
     <input type="text" name="price" value="${product.price}" >
     <input type="text" name="quantity" value="${product.quantity}">
     <input type="text" name="color" value="${product.color}">
